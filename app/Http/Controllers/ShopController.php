@@ -162,6 +162,7 @@ class ShopController extends Controller
         }
 
         // bước 2:  lấy ra chi tiết thông tin những sản phẩm đã xem ,từ cookie
+        $viewedProducts =[] ;
         if (!empty($_COOKIE['list_product_viewed'])) {
             $products_viewed =  $_COOKIE['list_product_viewed'];
             $array_products_viewed = json_decode($products_viewed); // [48,48,56,46,89,10,12]
